@@ -35,6 +35,16 @@ CREATE TABLE clientes (
     tipo_vaga VARCHAR(20)
 );
 
+CREATE TABLE funcionario (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  nm_funcionario VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  dt_nascimento DATE NOT NULL,
+  cpf VARCHAR(11) NOT NULL UNIQUE
+);
+
+
+
 --INSERT INTO vagas_individuais (codigo, nome, placa_carro, data_entrada, data_saida) VALUES
 --(1, 'Fulano', 'ABC-1234', '2023-04-16 10:00:00', '2023-04-16 14:00:00'),
 --(2, 'Beltrano', 'DEF-5678', '2023-04-16 11:30:00', '2023-04-16 17:45:00'),
@@ -52,3 +62,9 @@ CREATE TABLE clientes (
 --(5, 'Roberto', 'POL-3698', '2023-04-16 14:00:00', NULL, 'Empresa B'),
 --(6, 'Fernanda', 'MNP-0981', '2023-04-16 16:30:00', NULL, 'Empresa C'),
 --(7, 'Daniel', 'JKL-7539', '2023-04-16 19:00:00', NULL, 'Empresa)
+
+--INSERT INTO funcionario (nome, email, data_nascimento, cpf)
+--VALUES 
+--('João Silva', 'joao.silva@email.com', '1990-05-15', '123.456.789-00'),
+--('Maria Santos', 'maria.santos@email.com', '1995-08-21', '987.654.321-00'),
+--('Pedro Oliveira', 'pedro.oliveira@email.com', '1985-11-30', '111.222.333-44');
